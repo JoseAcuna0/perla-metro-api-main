@@ -4,7 +4,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// HttpClient global para consumir otros microservicios
+// HttpClient para proxy
 builder.Services.AddHttpClient();
 
 var app = builder.Build();
