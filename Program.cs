@@ -7,6 +7,9 @@ builder.Services.AddSwaggerGen();
 // HttpClient global para consumir otros microservicios
 builder.Services.AddHttpClient();
 
+// Registrar servicios personalizados
+builder.Services.AddScoped<MainApi.Services.IUserService, MainApi.Services.UserService>();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
