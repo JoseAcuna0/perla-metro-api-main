@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 /// <summary>
@@ -6,6 +8,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();            // Soporte para controladores de la API
 builder.Services.AddEndpointsApiExplorer();   // Explorador de endpoints (Swagger/OpenAPI)
 builder.Services.AddSwaggerGen();             // Generador de documentación Swagger
+
+builder.Services
+.AddControllers()
+.AddJsonOptions(options =>
+{
+    // Esto hace que ASP.NET acepte y serialice enums como string
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
 
 /// <summary>
 /// Registro de HttpClient.
