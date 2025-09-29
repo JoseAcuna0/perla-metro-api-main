@@ -147,24 +147,4 @@ La API arrancará en: https://localhost:5001
 
 Swagger disponible en: https://localhost:5001/swagger
 
-✅ Ejemplo de uso con Postman
-Tickets
-Crear ticket
 
-http
-Copiar código
-POST https://localhost:5001/api/tickets/add
-Content-Type: application/json
-
-{
-  "idUser": "12345",
-  "issueDate": "2025-09-28T08:00:00",
-  "price": 1200,
-  "type": "Ida",
-  "state": "Activo"
-}
-Obtener tickets por usuario
-
-http
-Copiar código
-GET https://localhost:5001/api/tickets?userId=12345
