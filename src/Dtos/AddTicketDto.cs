@@ -10,7 +10,7 @@ namespace MainApi.src.Dtos
     public class AddTicketDto
     {
         [Required]
-        public required string IdUser { get; set; }
+        public string IdUser { get; set; } = null!;
         [Required]
         [EnumDataType(typeof(TicketType))]
         public TicketType Type { get; set; }

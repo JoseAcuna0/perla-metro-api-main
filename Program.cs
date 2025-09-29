@@ -5,10 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 /// <summary>
 /// Registro de servicios en el contenedor de dependencias.
 /// </summary>
-builder.Services.AddControllers();            // Soporte para controladores de la API
-builder.Services.AddEndpointsApiExplorer();   // Explorador de endpoints (Swagger/OpenAPI)
-builder.Services.AddSwaggerGen();             // Generador de documentación Swagger
-
+// Configurar controladores con soporte para JSON y Swagger
 builder.Services
 .AddControllers()
 .AddJsonOptions(options =>
@@ -17,6 +14,9 @@ builder.Services
     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
 
+builder.Services.AddEndpointsApiExplorer();   // Explorador de endpoints (Swagger/OpenAPI)
+builder.Services.AddSwaggerGen();             // Generador de documentación Swagger
+
 /// <summary>
 /// Registro de HttpClient.
 /// Este cliente se inyecta en los controladores y se utiliza para 
@@ -24,10 +24,14 @@ builder.Services
 /// </summary>
 builder.Services.AddHttpClient();
 
+// HttpClient para TicketService
 builder.Services.AddHttpClient("TicketService", client =>
 {
     client.BaseAddress = new Uri("http://localhost:5050"); 
 });
+
+// Registrar servicios personalizados
+builder.Services.AddScoped<MainApi.Services.IUserService, MainApi.Services.UserService>();
 
 var app = builder.Build();
 
