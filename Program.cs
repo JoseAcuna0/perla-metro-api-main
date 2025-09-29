@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 var builder = WebApplication.CreateBuilder(args);
 
 /// <summary>
@@ -7,12 +9,25 @@ builder.Services.AddControllers();            // Soporte para controladores de l
 builder.Services.AddEndpointsApiExplorer();   // Explorador de endpoints (Swagger/OpenAPI)
 builder.Services.AddSwaggerGen();             // Generador de documentación Swagger
 
+builder.Services
+.AddControllers()
+.AddJsonOptions(options =>
+{
+    // Esto hace que ASP.NET acepte y serialice enums como string
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+});
+
 /// <summary>
 /// Registro de HttpClient.
 /// Este cliente se inyecta en los controladores y se utiliza para 
 /// reenviar las solicitudes hacia los microservicios (ej: Routes Service en Render).
 /// </summary>
 builder.Services.AddHttpClient();
+
+builder.Services.AddHttpClient("TicketService", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5050"); 
+});
 
 var app = builder.Build();
 

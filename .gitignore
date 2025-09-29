@@ -1,2 +1,13 @@
+# excluye carpetas bin y obj
+/bin/
+/obj/
 bin/
 obj/
+
+# IDEs
+.vscode/
+.idea/
+
+
+#extra
+.env
