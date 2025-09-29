@@ -14,6 +14,11 @@ builder.Services.AddSwaggerGen();             // Generador de documentación Swa
 /// </summary>
 builder.Services.AddHttpClient();
 
+builder.Services.AddHttpClient("TicketService", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5050"); 
+});
+
 var app = builder.Build();
 
 /// <summary>

@@ -482,24 +482,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josea\\.nuget\\packages\\": {}
+    "C:\\Users\\yinko\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josea\\Desktop\\UCN\\8vo Semestre\\Arquitectura\\Proyectos-Talleres\\MainAPIII\\MainApi\\MainApi.csproj",
+      "projectUniqueName": "C:\\yin\\4-UCN-4\\10-Decimo Semestre\\Arquitectura de sistemas\\Talleres\\taller 1\\perla-metro-api-main\\MainApi.csproj",
       "projectName": "MainApi",
-      "projectPath": "C:\\Users\\josea\\Desktop\\UCN\\8vo Semestre\\Arquitectura\\Proyectos-Talleres\\MainAPIII\\MainApi\\MainApi.csproj",
-      "packagesPath": "C:\\Users\\josea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josea\\Desktop\\UCN\\8vo Semestre\\Arquitectura\\Proyectos-Talleres\\MainAPIII\\MainApi\\obj\\",
+      "projectPath": "C:\\yin\\4-UCN-4\\10-Decimo Semestre\\Arquitectura de sistemas\\Talleres\\taller 1\\perla-metro-api-main\\MainApi.csproj",
+      "packagesPath": "C:\\Users\\yinko\\.nuget\\packages\\",
+      "outputPath": "C:\\yin\\4-UCN-4\\10-Decimo Semestre\\Arquitectura de sistemas\\Talleres\\taller 1\\perla-metro-api-main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\josea\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\yinko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -551,7 +553,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.413/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
